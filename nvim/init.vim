@@ -212,7 +212,6 @@ nmap <Leader>yy :%w !pbcopy<CR><CR>
 set splitbelow
 set splitright
 
-
 set cmdheight=2
 set signcolumn=yes
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
@@ -256,6 +255,7 @@ nmap <Leader>rf <Plug>(coc-refactor)
 xmap <Leader>f  <Plug>(coc-format-selected)
 nmap <Leader>f  <Plug>(coc-format-selected)
 nmap <Leader>v V
+nmap <Leader>f za
 
 noh
 
