@@ -254,8 +254,13 @@ nmap <Leader>rf <Plug>(coc-refactor)
 " Formatting selected code.
 xmap <Leader>f  <Plug>(coc-format-selected)
 nmap <Leader>f  <Plug>(coc-format-selected)
+"visual line keybind
 nmap <Leader>v V
+" better fold keybinds
 nmap <Leader>f za
+"insert newline withough going into insert mode
+nnoremap <Leader>o o<Esc>k
+nnoremap <Leader>O O<Esc>j
 
 noh
 
