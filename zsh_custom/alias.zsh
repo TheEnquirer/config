@@ -27,7 +27,8 @@ function gutil {
     tmux split-window -h -p 18 -d cmatrix
     git add ${1:-"."} && git commit -v --allow-empty
     gp
-    tmux select-pane -R; kill-pane
+    tmux select-pane -R
+    tmux kill-pane
 }
 alias gg='gutil'
 alias GG='gutil -A'
