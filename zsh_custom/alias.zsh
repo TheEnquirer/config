@@ -24,6 +24,7 @@ alias gp='gpext'
 alias grsh='git remote show'
 function gutil {
     gpl
+    tmux split-window -h -p 18 -d cmatrix
     git add ${1:-"."} && git commit -v --allow-empty
     gp
 }
