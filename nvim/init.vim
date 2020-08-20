@@ -49,7 +49,7 @@ let g:indentLine_concealcursor = 'nv'
 "   tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" HUD Toggles
+"- HUD Toggles
 Plug 'preservim/nerdtree'
 let g:rainbow_active=1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
