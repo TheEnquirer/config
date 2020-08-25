@@ -12,7 +12,7 @@ function newnote {
     vim "$1" 
 }
 alias nn="newnote"
-
+defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
 ###########################################
