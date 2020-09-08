@@ -202,6 +202,8 @@ nmap <Leader>hr <Plug>(GitGutterRevertHunk)
 "no escape key (escape pressing escape)
 inoremap jc <Esc>
 inoremap jf <Esc>:w<return>
+inoremap <C-c> <Esc>:w<return>
+command W w
 
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !pbcopy<CR><CR>
