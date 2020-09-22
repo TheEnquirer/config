@@ -67,9 +67,11 @@ call plug#end()
 
 " My Customs
 " " CUSTOM: change backup dir https://stackoverflow.com/a/1625850/10372825
-set backupdir=$VIMCONFIG/autogentmp//
-set directory=$VIMCONFIG/autogentmp//
-set undodir=$VIMCONFIG/autogentmp//,~/.vim/autogentmp/undo//
+"set backupdir=$VIMCONFIG/autogentmp//
+"set directory=$VIMCONFIG/autogentmp//
+"set undodir=$VIMCONFIG/autogentmp//,~/.vim/autogentmp/undo//
+set nobackup
+set nowritebackup
 
 " jump to previous position https://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
 if has("autocmd")
