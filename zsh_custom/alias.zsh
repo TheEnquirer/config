@@ -12,6 +12,7 @@ function newnote {
     vim "$1" 
 }
 alias nn="newnote"
+alias jp="jupyter notebook"
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
