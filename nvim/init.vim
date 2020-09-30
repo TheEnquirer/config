@@ -59,8 +59,9 @@ let g:rainbow_conf = {
 let g:gitgutter_highlight_linenrs = 1 " auto highlight change line numbers
 let g:gitgutter_preview_win_floating = 0 " Disable floating/popup window for <Leader>hp
 
-" Rednering
+" Rendering
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
@@ -206,6 +207,12 @@ inoremap jc <Esc>
 inoremap jf <Esc>:w<return>
 inoremap <C-c> <Esc>:w<return>
 command W w
+
+
+" Colors! 
+command COLH ColorHighlight
+command COLC ColorClear 
+
 
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !pbcopy<CR><CR>
