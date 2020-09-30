@@ -16,6 +16,7 @@ settings.scrollStepSize = 90;
 
 unmap('<Ctrl-h>'); // for tab navigation
 aceVimMap('jf', '<Esc>', 'insert');
+Hints.characters = "sdfgqwertzxcvbn"; // remove 'a' to make hints grepper compatible
 
 
 
