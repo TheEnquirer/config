@@ -18,6 +18,20 @@ Plug 'junegunn/fzf.vim'
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 
+" Non-buffer overwrite keybinds
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+nnoremap <leader>D "_D
+vnoremap <leader>D "_D
+nnoremap <leader>c "_c
+vnoremap <leader>c "_c
+nnoremap <leader>C "_C
+vnoremap <leader>C "_C
+nnoremap <leader>x "_x
+vnoremap <leader>x "_x
+nnoremap <leader>X "_X
+vnoremap <leader>X "_X
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
