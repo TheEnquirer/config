@@ -56,10 +56,10 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'rickhowe/diffchar.vim'
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
-let g:indentLine_conceallevel = 1
-let g:indentLine_concealcursor = 'nv'
+"Plug 'Yggdroot/indentLine'
+"let g:indentLine_char = '▏'
+"let g:indentLine_conceallevel = 1
+"let g:indentLine_concealcursor = 'nv'
 "   tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -136,6 +136,11 @@ let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 colo dark_purple
+
+" allow opacity to work in alacritt
+command OP hi! Normal ctermbg=NONE guibg=NONE 
+command FI colo dark_purple
+"hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 
 "set search stuff
