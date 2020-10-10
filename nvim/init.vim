@@ -138,6 +138,7 @@ set termguicolors
 colo dark_purple
 
 " allow opacity to work in alacritt
+hi! Normal ctermbg=NONE guibg=NONE 
 command OP hi! Normal ctermbg=NONE guibg=NONE 
 command FI colo dark_purple
 "hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
