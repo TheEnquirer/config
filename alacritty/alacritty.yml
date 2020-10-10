@@ -8,11 +8,14 @@ font:
     normal:
         family: Hack Nerd Font
     use_thin_strokes: true
+
+background_opacity: 0.85
+
+
 colors:
     cursor:
         text: '#000000'
         cursor: '#E8E8E8'
-    # [challenger deep colors](https://github.com/challenger-deep-theme/alacritty/blob/master/challenger-deep.yml)
     # Default colors
     primary:
         background: '#18171b'
@@ -41,4 +44,11 @@ colors:
         white:   '0xa6b3cc'
 key_bindings:
     - { key: N, mods: Command, command: { program: "open", args: ["-nb", "io.alacritty"] } }
+    #- { key: N,        mods: Command,       action: SpawnNewInstance             }
+
+
+
+mouse:
+    hide_when_typing: true
+
 
