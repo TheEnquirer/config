@@ -15,6 +15,16 @@ yabai -m config left_padding   15
 yabai -m config right_padding  15
 yabai -m config window_gap     15
 
+
+# make alacritty look cool 
+yabai -m config --space 8 top_padding 20 
+yabai -m config --space 8 bottom_padding 20 
+yabai -m config --space 8 left_padding 20 
+yabai -m config --space 8 right_padding 20 
+yabai -m config --space 8 window_gap 20 
+
+
+
 # 	only show window shadows for floating windows
 #yabai -m config window_shadow float
 
