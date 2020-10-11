@@ -4,13 +4,12 @@ window:
 scrolling:
     history: 100000
 font:
-    size: 13
+    size: 12.5
     normal:
         family: Hack Nerd Font
     use_thin_strokes: true
 
-background_opacity: 0.85
-
+background_opacity: 0.85 
 
 colors:
     cursor:
