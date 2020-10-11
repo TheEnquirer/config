@@ -1,24 +1,51 @@
 -- make sure to run: defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/.hammerspoon/init.lua"
 
-
 ctrlDoublePress = require("ctrlDoublePress")
-win = ""
-
-
+win = hs.window.focusedWindow()
 ctrlDoublePress.timeFrame = 0.3
 
 
 ctrlDoublePress.action = function()
---    do something special
-    local alacritty = hs.application.find('alacritty')
-    if alacritty:isFrontmost() then
-	--alacritty:hide()
+    local focused = hs.application.frontmostApplication()
+    print(focused:title())
+    if focused:title() == "Alacritty" then
 	win:focus()
     else
 	win = hs.window.focusedWindow()
+
 	hs.application.launchOrFocus("/Applications/Alacritty.app")
     end
+
  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
