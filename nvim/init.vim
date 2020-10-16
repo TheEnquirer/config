@@ -110,8 +110,9 @@ set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
 " show invisibles
 set encoding=utf-8
-set listchars=eol:⏎,tab:→·,trail:·,extends:>,precedes:<
-set list
+set listchars=eol:⏎,tab:j·,trail:·,extends:>,precedes:<
+set nolist
+
 
 
 " colors
