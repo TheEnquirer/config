@@ -1,14 +1,11 @@
-# This is Exr0n's, not mine. https://github.com/Exr0n/config/blob/master/yabai/yabai.zsh
+#########################
+#    YABAI SETUP	#
+#########################
 
-# yabai config (https://github.com/koekeishiya/yabai/wiki/Tips-and-tricks#split-yabai-configuration-across-multiple-files)
-# references from:
-#   https://gist.github.com/TomFaulkner/5531bde4f2955c08bcd07d6e308f6d59
-
-#    Yabai setup
-
+# layout 
 yabai -m config layout bsp
 
-# 	set gap padding padding and gaps to 10px
+# set gap padding padding and gaps to 15px
 yabai -m config top_padding    15
 yabai -m config bottom_padding 15
 yabai -m config left_padding   15
@@ -23,33 +20,7 @@ yabai -m config --space 8 left_padding 20
 yabai -m config --space 8 right_padding 20 
 yabai -m config --space 8 window_gap 20 
 
-
-
-# 	only show window shadows for floating windows
-#yabai -m config window_shadow float
-
-# 	render all unfocused windows with 80% opacity
-yabai -m config window_opacity on
-yabai -m config window_opacity_duration 0.0
-yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity 0.95
-
-
-
-
-# TODO: figure this out
-
-## set mouse interaction modifier key (default: fn)
-#yabai -m config mouse_modifier fn
-
-## set modifier + left-click drag to resize window (default: move)
-#yabai -m config mouse_action1 resize
-
-## set modifier + right-click drag to resize window (default: resize)
-#yabai -m config mouse_action2 resize
-
 # debug
 yabai -m config debug_output
-
 
 echo 'yabai configuration loaded.'
