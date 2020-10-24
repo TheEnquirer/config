@@ -11,8 +11,8 @@ ctrl + cmd - l             : yabai -m window   --focus east
 ctrl + cmd - 1             : yabai -m display  --focus 1
 ctrl + cmd - 2             : yabai -m display  --focus 2
 ctrl + cmd - 3             : yabai -m display  --focus 3
-ctrl + cmd - 9             : yabai -m space    --focus 9
 # TODO: figure out focus --prev  for cmd-tab alternative
+
 
 # swapping
 ctrl + alt - h             : yabai -m window   --swap west
@@ -32,8 +32,8 @@ ctrl + alt - 3      : yabai -m window   --display 3
 ctrl + cmd - 4      : yabai -m space    --focus 1
 
 # moving
-ctrl + cmd - left  : yabai -m window --space prev| yabai -m space --focus prev
-ctrl + cmd - right : yabai -m window --space next| yabai -m space --focus next
+ctrl + cmd - left  : yabai -m window --space prev || yabai -m space --focus prev
+ctrl + cmd - right : yabai -m window --space next || yabai -m space --focus next
 
 # open specific applications
 ctrl + cmd - d             : open -a Discord
@@ -51,3 +51,9 @@ ctrl + cmd - f: yabai -m window --toggle float
 
 # toggle horizontal/vertical split
 ctrl + alt - i: yabai -m window --toggle split
+
+# toggle yabai fullscreen
+ctrl + alt - b             : yabai -m window --toggle zoom-parent
+
+
+
