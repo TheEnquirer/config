@@ -15,6 +15,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 
