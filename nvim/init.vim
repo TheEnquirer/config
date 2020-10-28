@@ -110,10 +110,8 @@ set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
 " show invisibles
 set encoding=utf-8
-set listchars=eol:⏎,tab:j·,trail:·,extends:>,precedes:<
+"set listchars=eol:⏎,tab:j·,trail:·,extends:>,precedes:<
 set nolist
-
-
 
 " colors
 " fix neovim's weird highlight (https://github.com/neovim/neovim/issues/9019#issuecomment-521532103)
@@ -144,20 +142,10 @@ hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 command OP call SetOpa()
 command FI colo dark_purple
 
-
-
-
 function! SetOpa()
     hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
     hi! Normal ctermbg=NONE guibg=NONE 
 endfunction
-
-
-
-
-
-
-
 
 "set search stuff
 set hlsearch
@@ -243,11 +231,12 @@ inoremap jf <Esc>:w<return>
 inoremap <C-c> <Esc>:w<return>
 command W w
 
+" print working file
+command PWF echo @%
 
 " Colors! 
 command COLH ColorHighlight
 command COLC ColorClear 
-
 
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !pbcopy<CR><CR>
