@@ -1,13 +1,15 @@
 ![programming enviroment](./resources/programming_env.jpg)
 
 # How can you say no? 
-* And yes, this is OSX *
+*And yes, this is OSX*
 
 --- 
 
 
 ## This is 
+
 ---
+
 my config for quite a few things. Notably,
 
 - [Neovim](https://github.com/neovim/neovim), the ***BEST*** text editor
@@ -18,8 +20,9 @@ my config for quite a few things. Notably,
 - [Surfing Keys](https://github.com/brookhong/Surfingkeys): vim keybinds **everywhere.** 
 - [Zsh](https://ohmyz.sh), I have some cool aliases check em out 
 
-```
-```
+
+---
+---
 
 ## Philosophy 
 ---
