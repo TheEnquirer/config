@@ -18,8 +18,6 @@ my config for quite a few things. Notably,
 - [Zsh](https://ohmyz.sh), I have some cool aliases check em out 
 
 
----
----
 
 ## Philosophy 
 
