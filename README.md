@@ -38,7 +38,7 @@ Vim keybinds in my browsers, vim keybinds for my windows, and vim keybinds in my
 (with caps-lock rebound to control)
 
 - skhd + yabai
-    - Focusing is done with `` ctrl + cmd - h/j/k/l `` and `` ctrl + cmd - `first letter` `` for opening specific aplicatins, my main way of navigation 
+    - Focusing is done with `` ctrl + cmd - h/j/k/l `` and `` ctrl + cmd - `first letter` `` for opening specific applications, my main way of navigation 
     - Swapping is done with `` ctrl + alt - h/j/j/l `` and `` ctrl + shift + alt - h/j/j/l `` for warp swap 
     - And a bunch more you can check out [here](https://github.com/TheEnquirer/config/blob/master/skhd/skhdrc)
 - tmux 
@@ -72,4 +72,4 @@ Lastly, [Wallpaper Source](https://www.firewatchgame.com) and the [wallpaper ima
 And huge thanks to @exr0n and @jemoka for helping me develop my config over the early months of my config and journey into vim 
 
 
-*More coming "soon(?)"!*
+*More coming 'soon(?)'!*
