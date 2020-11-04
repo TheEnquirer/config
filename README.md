@@ -3,12 +3,9 @@
 # How can you say no? 
 *And yes, this is OSX*
 
---- 
 
 
 ## This is 
-
----
 
 my config for quite a few things. Notably,
 
