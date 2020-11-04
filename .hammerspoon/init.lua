@@ -2,7 +2,7 @@
 
 ctrlDoublePress = require("ctrlDoublePress")
 win = hs.window.focusedWindow()
-ctrlDoublePress.timeFrame = 0.3
+ctrlDoublePress.timeFrame = 0.4
 
 
 ctrlDoublePress.action = function()

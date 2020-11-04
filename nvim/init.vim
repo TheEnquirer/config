@@ -8,8 +8,6 @@ exe 'set rtp+=' . $VIMCONFIG
 
 call plug#begin('~/.config/nvim/plugged')
 
-
-
 " Editing
 Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
