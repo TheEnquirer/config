@@ -164,7 +164,7 @@ set textwidth=0
 set wrapmargin=0
 
 " code folding: https://codeyarns.com/2014/09/02/how-to-fold-code-in-vim/
-set foldmethod=indent
+set foldmethod=manual
 set foldlevelstart=5
 set nofoldenable
 "   persistent folds (https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions)
