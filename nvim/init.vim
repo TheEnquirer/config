@@ -105,7 +105,7 @@ au FocusGained,BufEnter * :checktime
 " passive and HUD
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 set number " line numbers
-
+set nu rnu " reletive line nums
 set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
 " show invisibles
@@ -293,6 +293,7 @@ nmap <Leader>f  <Plug>(coc-format-selected)
 nmap <Leader>v V
 " better fold keybinds
 nmap <Leader>f za
+vnoremap <Leader>z zf
 "insert newline withough going into insert mode
 nnoremap <Leader>o o<Esc>k
 nnoremap <Leader>O O<Esc>j
