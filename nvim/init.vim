@@ -105,6 +105,7 @@ au FocusGained,BufEnter * :checktime
 " passive and HUD
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 set number " line numbers
+
 set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
 " show invisibles
