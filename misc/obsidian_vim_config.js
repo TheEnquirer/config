@@ -1,95 +1,12 @@
 // #########################################################################
-// Past this intil the console every time until an offcial api realease!
+// Past this intil the console every time until an offcial api realease! -- update: it came out!
 // #########################################################################
 
 CodeMirror.Vim.map('jf', '<Esc>', 'insert')
 CodeMirror.Vim.map('j', 'gj', 'normal')
 CodeMirror.Vim.map('k', 'gk', 'normal')
 
-
-// No I don't have a problem.
-
+// TODO: get this working with the obsidian plugin eco
 
 
-// ok i might have a problem....
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
