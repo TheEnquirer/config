@@ -105,9 +105,16 @@ au FocusGained,BufEnter * :checktime
 " passive and HUD
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 set number " line numbers
-set nu rnu " reletive line nums
 set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
+
+set nu rnu " reletive line nums
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " show invisibles
 set encoding=utf-8
 "set listchars=eol:⏎,tab:j·,trail:·,extends:>,precedes:<
