@@ -234,6 +234,9 @@ command W w
 " print working file
 command PWF echo @%
 
+" source config
+command S source ~/.config/nvim/init.vim
+
 " Colors! 
 command COLH ColorHighlight
 command COLC ColorClear 
