@@ -14,6 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'tpope/vim-surround'
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 
