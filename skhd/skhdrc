@@ -47,6 +47,15 @@ ctrl + cmd - v             : open -a Vivaldi
 ctrl + cmd - z             : open -a zoom.us 
 #ctrl + cmd - p             : open -a Preview
 
+
+
+#ctrl + cmd - n             : open -na Alacritty;  yabai -m window --layout float
+#ctrl + cmd - n: open -na Alacritty; skhd -k "cmd - w"
+ctrl + cmd - n: yabai -m display  --focus 3; open -na Alacritty; sleep 0.08; yabai -m window --toggle float; yabai -m window --resize abs:1000:600; yabai -m window --move abs:780:425 
+
+#ctrl + cmd - n: yabai -m window --toggle float
+
+
 # unlock/Lock
 ctrl + cmd - f: yabai -m window --toggle float
 
