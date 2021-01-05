@@ -5,8 +5,6 @@ alias c="clear"
 alias desk="cd ~/desktop"
 alias l="ls -a"
 alias vim="nvim"
-alias :sunglasses:="open -a 'Badlion Client'"
-alias nt="cd ~/notes"
 function newnote {
     nt
     vim "$1" 
