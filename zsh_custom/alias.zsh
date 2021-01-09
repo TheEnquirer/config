@@ -5,12 +5,8 @@ alias c="clear"
 alias desk="cd ~/desktop"
 alias l="ls -a"
 alias vim="nvim"
-function newnote {
-    nt
-    vim "$1" 
-}
-alias nn="newnote"
 alias jp="jupyter notebook"
+alias cpwd="pwd | pbcopy"
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
