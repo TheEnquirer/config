@@ -53,6 +53,9 @@ ctrl + cmd - n: yabai -m display  --focus 3; open -na Alacritty; sleep 0.15; yab
 # unlock/Lock
 ctrl + cmd - f: yabai -m window --toggle float
 
+# sticky -- sadly, doesnt work :(
+#ctrl + alt - s: yabai -m window --toggle sticky
+
 # toggle horizontal/vertical split
 ctrl + alt - i: yabai -m window --toggle split
 
@@ -60,4 +63,5 @@ ctrl + alt - i: yabai -m window --toggle split
 ctrl + alt - b             : yabai -m window --toggle zoom-parent
 
 
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
