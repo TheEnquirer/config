@@ -3,8 +3,15 @@
 // #########################################################################
 
 CodeMirror.Vim.map('jf', '<Esc>', 'insert')
+
+//CodeMirror.Vim.map('zqyu', 'j', 'normal')
+//CodeMirror.Vim.map('`zqx', 'k', 'normal')
+
 CodeMirror.Vim.map('j', 'gj', 'normal')
 CodeMirror.Vim.map('k', 'gk', 'normal')
+
+//CodeMirror.Vim.map('gj', 'j', 'normal')
+//CodeMirror.Vim.map('gk', 'k', 'normal')
 
 // TODO: get this working with the obsidian plugin eco
 
