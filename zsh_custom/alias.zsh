@@ -7,7 +7,7 @@ alias l="ls -a"
 alias vim="nvim"
 alias jp="jupyter notebook"
 alias cpwd="pwd | pbcopy"
-alias r="ranger"
+alias f=". ranger"
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
