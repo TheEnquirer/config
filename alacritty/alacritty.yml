@@ -1,6 +1,10 @@
 window:
     decorations: buttonless
     startup_mode: Maximized
+    #padding: 
+        #x: 10
+        #y: 2
+    dynamic_padding: true
 scrolling:
     history: 100000
 font:
