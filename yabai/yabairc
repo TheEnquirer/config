@@ -14,11 +14,11 @@ yabai -m config window_gap     15
 
 
 # make alacritty look cool 
-yabai -m config --space 8 top_padding 25
-yabai -m config --space 8 bottom_padding 15
-yabai -m config --space 8 left_padding 25
-yabai -m config --space 8 right_padding 25
-yabai -m config --space 8 window_gap 20
+yabai -m config --space 8 top_padding 35
+yabai -m config --space 8 bottom_padding 25
+yabai -m config --space 8 left_padding 35
+yabai -m config --space 8 right_padding 35
+yabai -m config --space 8 window_gap 30
 
 # debug
 yabai -m config debug_output
