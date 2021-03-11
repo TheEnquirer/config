@@ -8,6 +8,15 @@ alias vim="nvim"
 alias jp="jupyter notebook"
 alias cpwd="pwd | pbcopy"
 alias f=". ranger"
+function swaputil {
+    tmp=`mktemp`
+    mv $1 $tmp
+    mv $2 $1
+    mv $tmp $2
+}
+alias swap="swaputil"
+
+
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
