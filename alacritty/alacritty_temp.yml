@@ -48,7 +48,9 @@ colors:
         white:   '0xa6b3cc'
 key_bindings:
     - { key: N, mods: Command, command: { program: "open", args: ["-nb", "io.alacritty"] } }
-    - { key: O, mods: Alt, command: { program: "opt"}}
+    - { key: O, mods: Alt, command: { program: "/Users/huxmarv/.config/bin/toggleOP.zsh"}}
+
+      #- { key: O, mods: Alt, command: { program: "toggleOP.zsh", args: []}}
     #- { key: O, mods: Alt, command: { program: "opt", args: []}}
 
     #- { key: N,        mods: Command,       action: SpawnNewInstance             }
@@ -57,6 +59,13 @@ key_bindings:
 
 mouse:
     hide_when_typing: true
+
+
+
+
+
+
+
 
 
 

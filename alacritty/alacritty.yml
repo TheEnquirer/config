@@ -46,9 +46,12 @@ colors:
         magenta: '0x906cff'
         cyan:    '0x63f2f1'
         white:   '0xa6b3cc'
-key_bindings:
-    - { key: N, mods: Command, command: { program: "open", args: ["-nb", "io.alacritty"] } }
-    - { key: O, mods: Alt, command: { program: "opt", args: ["-s"]}}
+        key_bindings:
+            - { key: N, mods: Command, command: { program: "open", args: ["-nb", "io.alacritty"] } }
+            - { key: O, mods: Alt, command: { program: "mkdir"}}
+            #- { key: O, mods: Alt, command: { program: "/Users/huxmarv/.config/bin/toggleOP.zsh"}}
+            #- { key: O, mods: Alt, command: { program: "/Users/huxmarv/.config/bin/toggleOP.zsh"}}
+
 
     #- { key: N,        mods: Command,       action: SpawnNewInstance             }
 
@@ -59,6 +62,12 @@ mouse:
 
 
 background_opacity: 0.85
+
+
+
+
+
+
 
 
 

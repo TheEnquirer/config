@@ -49,17 +49,25 @@ alias pym='python3 -m'
 
 
 
-function toggleOP {
+function toggleOPP {
+    #tmpp=`mktemp`
+    #mv "/Users/huxmarv/.config/alacritty/alacritty.yml" $tmpp
+    #mv "/Users/huxmarv/.config/alacritty/alacritty_temp.yml" "/Users/huxmarv/.config/alacritty/alacritty.yml" 
+    #mv $tmpp "/Users/huxmarv/.config/alacritty/alacritty_temp.yml"
+    ##echo '' >> ~/.config/alacritty/alacritty.yml
+    ##nvim "/Users/huxmarv/.config/alacritty/alacritty.yml" 
+    
+
     tmpp=`mktemp`
     mv "/Users/huxmarv/.config/alacritty/alacritty.yml" $tmpp
     mv "/Users/huxmarv/.config/alacritty/alacritty_temp.yml" "/Users/huxmarv/.config/alacritty/alacritty.yml" 
     mv $tmpp "/Users/huxmarv/.config/alacritty/alacritty_temp.yml"
-    #echo '' >> ~/.config/alacritty/alacritty.yml
     touch ~/.config/alacritty/alacritty.yml
-    #nvim "/Users/huxmarv/.config/alacritty/alacritty.yml" 
+
 }
 
-alias opt="toggleOP"
+
+alias opt="toggleOPP"
 
 
 
