@@ -15,8 +15,6 @@ function swaputil {
     mv $tmp $2
 }
 alias swap="swaputil"
-
-
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
@@ -46,4 +44,23 @@ alias py='python3'
 alias p='python3'
 alias pip='python3 -m pip'
 alias pym='python3 -m'
+
+
+
+
+
+function toggleOP {
+    tmpp=`mktemp`
+    mv "/Users/huxmarv/.config/alacritty/alacritty.yml" $tmpp
+    mv "/Users/huxmarv/.config/alacritty/alacritty_temp.yml" "/Users/huxmarv/.config/alacritty/alacritty.yml" 
+    mv $tmpp "/Users/huxmarv/.config/alacritty/alacritty_temp.yml"
+    #nvim "/Users/huxmarv/.config/alacritty/alacritty.yml" 
+}
+
+alias opt="toggleOP"
+
+
+
+
+
 
