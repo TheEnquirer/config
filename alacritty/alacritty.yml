@@ -13,7 +13,7 @@ font:
         family: Hack Nerd Font
     use_thin_strokes: true
 
-background_opacity: 0.85
+#background_opacity: 0.85
 #background_opacity: 1
 
 colors:
@@ -48,7 +48,7 @@ colors:
         white:   '0xa6b3cc'
 key_bindings:
     - { key: N, mods: Command, command: { program: "open", args: ["-nb", "io.alacritty"] } }
-    #- { key: O, mods: Alt, command: { program: "opt", args: []}}
+    - { key: O, mods: Alt, command: { program: "opt", args: ["-s"]}}
 
     #- { key: N,        mods: Command,       action: SpawnNewInstance             }
 
@@ -56,5 +56,16 @@ key_bindings:
 
 mouse:
     hide_when_typing: true
+
+
+background_opacity: 0.85
+
+
+
+
+
+
+
+
 
 
