@@ -76,9 +76,16 @@ let g:gitgutter_preview_win_floating = 0 " Disable floating/popup window for <Le
 " Rendering
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 Plug 'chrisbra/Colorizer'
+"Plug 'szymonmaszke/vimpyter'
 
 call plug#end()
 
+
+" Jupyter Notebook
+
+"autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
+"autocmd Filetype ipynb nmap <silent><Leader>j :VimpyterStartJupyter<CR>
+"autocmd Filetype ipynb nmap <silent><Leader>l :VimpyterStartNteract<CR>
 
 " My Customs
 " " CUSTOM: change backup dir https://stackoverflow.com/a/1625850/10372825
