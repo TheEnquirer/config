@@ -252,6 +252,16 @@ command PWF echo @%
 " source config
 command S source ~/.config/nvim/init.vim
 
+" find diff
+function! s:DiffWithSaved()
+    let filetype=&ft
+    diffthis
+    vnew | r # | normal! 1Gdd
+    diffthis
+    exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
 " Colors! 
 command COLH ColorHighlight
 command COLC ColorClear 
