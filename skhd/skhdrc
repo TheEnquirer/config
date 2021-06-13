@@ -50,30 +50,28 @@ ctrl + cmd - e             : open -a Vecto
 
 
 # remaps
-#ralt - h: skhd -k "left"
-#ralt - j: skhd -k "down"
-#ralt - k: skhd -k "up"
-#ralt - l: skhd -k "right"
+ralt - h: skhd -k "left"
+ralt - j: skhd -k "down"
+ralt - k: skhd -k "up"
+ralt - l: skhd -k "right"
 
 
-#ralt + shift - h: skhd -k "shift - left"
-#ralt + shift - j: skhd -k "shift - down"
-#ralt + shift - k: skhd -k "shift - up"
-#ralt + shift - l: skhd -k "shift - right"
+ralt + shift - h: skhd -k "shift - left"
+ralt + shift - j: skhd -k "shift - down"
+ralt + shift - k: skhd -k "shift - up"
+ralt + shift - l: skhd -k "shift - right"
 
 # modal experiments
 
+## modal toggles
 :: viml
-
 cmd - m  ; viml
-
-#viml < cmd - m ; default
-
-#viml < ctrl - c ; default
-
+viml < cmd - m ; viml
 viml < i ; default
+viml < escape ; default
 
-#viml < h : skhd -k "left"
+
+## hjkl
 viml < h : skhd -k "left"
 viml < j : skhd -k "down"
 viml < k : skhd -k "up"
@@ -84,6 +82,27 @@ viml < shift - j: skhd -k "shift - down"
 viml < shift - k: skhd -k "shift - up"
 viml < shift - l: skhd -k "shift - right"
 
+## other move
+viml < g : skhd -k "cmd - up"
+viml < shift - g : skhd -k "cmd - down"
+
+viml < w : skhd -k "alt - right"
+viml < b : skhd -k "alt - left"
+
+viml < shift - w : skhd -k "alt + shift - right"
+viml < shift - b : skhd -k "alt + shift - left"
+
+viml < shift - a : skhd -k "cmd - right"; skhd -k "escape"
+viml < shift - i : skhd -k "cmd - left"; skhd -k "escape"
+
+## del and clipboard
+viml < p : skhd -k "cmd - v"
+viml < y : skhd -k "cmd - c"
+viml < d : skhd -k "cmd - x"
+
+## undo / redo
+viml < u : skhd -k "cmd - z"
+viml < ctrl - r : skhd -k "cmd + shift - z"
 
 
 # instant window
