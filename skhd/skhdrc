@@ -26,7 +26,7 @@ ctrl + shift + alt - k: yabai -m window --warp north
 ctrl + shift + alt - l: yabai -m window --warp east
 
 
-ctrl + alt - 1      : yabai -m window   --display 1 
+ctrl + alt - 1      : yabai -m window   --display 1
 ctrl + alt - 2      : yabai -m window   --display 2
 ctrl + alt - 3      : yabai -m window   --display 3
 ctrl + cmd - 4      : yabai -m space    --focus 1
@@ -50,16 +50,41 @@ ctrl + cmd - e             : open -a Vecto
 
 
 # remaps
-ralt - h: skhd -k "left"
-ralt - j: skhd -k "down"
-ralt - k: skhd -k "up"
-ralt - l: skhd -k "right"
+#ralt - h: skhd -k "left"
+#ralt - j: skhd -k "down"
+#ralt - k: skhd -k "up"
+#ralt - l: skhd -k "right"
 
 
-ralt + shift - h: skhd -k "shift - left"
-ralt + shift - j: skhd -k "shift - down"
-ralt + shift - k: skhd -k "shift - up"
-ralt + shift - l: skhd -k "shift - right"
+#ralt + shift - h: skhd -k "shift - left"
+#ralt + shift - j: skhd -k "shift - down"
+#ralt + shift - k: skhd -k "shift - up"
+#ralt + shift - l: skhd -k "shift - right"
+
+# modal experiments
+
+:: viml
+
+cmd - m  ; viml
+
+#viml < cmd - m ; default
+
+#viml < ctrl - c ; default
+
+viml < i ; default
+
+#viml < h : skhd -k "left"
+viml < h : skhd -k "left"
+viml < j : skhd -k "down"
+viml < k : skhd -k "up"
+viml < l : skhd -k "right"
+
+viml < shift - h: skhd -k "shift - left"
+viml < shift - j: skhd -k "shift - down"
+viml < shift - k: skhd -k "shift - up"
+viml < shift - l: skhd -k "shift - right"
+
+
 
 # instant window
 ctrl + cmd - n: yabai -m display  --focus 3; open -na Alacritty; sleep 0.15; yabai -m window --toggle float; yabai -m window --resize abs:1000:600; yabai -m window --move abs:780:425
@@ -78,4 +103,9 @@ ctrl + alt - b             : yabai -m window --toggle zoom-parent
 
 
 ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+
+
+
+
 
