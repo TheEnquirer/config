@@ -95,6 +95,11 @@ viml < shift - b : skhd -k "alt + shift - left"
 viml < shift - a : skhd -k "cmd - right"; skhd -k "escape"
 viml < shift - i : skhd -k "cmd - left"; skhd -k "escape"
 
+## visual
+viml < shift - v : skhd -k "cmd - left"; skhd -k "cmd + shift - right"
+
+viml < v : skhd -k "left"; skhd -k "right"
+
 ## del and clipboard
 viml < p : skhd -k "cmd - v"
 viml < y : skhd -k "cmd - c"
@@ -103,7 +108,6 @@ viml < d : skhd -k "cmd - x"
 ## undo / redo
 viml < u : skhd -k "cmd - z"
 viml < ctrl - r : skhd -k "cmd + shift - z"
-
 
 # instant window
 ctrl + cmd - n: yabai -m display  --focus 3; open -na Alacritty; sleep 0.15; yabai -m window --toggle float; yabai -m window --resize abs:1000:600; yabai -m window --move abs:780:425
