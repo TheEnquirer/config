@@ -50,25 +50,27 @@ ctrl + cmd - e             : open -a Vecto
 
 
 # remaps
-ralt - h: skhd -k "left"
-ralt - j: skhd -k "down"
-ralt - k: skhd -k "up"
-ralt - l: skhd -k "right"
+#ralt - h: skhd -k "left"
+#ralt - j: skhd -k "down"
+#ralt - k: skhd -k "up"
+#ralt - l: skhd -k "right"
 
 
-ralt + shift - h: skhd -k "shift - left"
-ralt + shift - j: skhd -k "shift - down"
-ralt + shift - k: skhd -k "shift - up"
-ralt + shift - l: skhd -k "shift - right"
+#ralt + shift - h: skhd -k "shift - left"
+#ralt + shift - j: skhd -k "shift - down"
+#ralt + shift - k: skhd -k "shift - up"
+#ralt + shift - l: skhd -k "shift - right"
 
 # modal experiments
 
 ## modal toggles
 :: viml
-cmd - m  ; viml
+#cmd - m  ; viml
+shift - space ; viml
 viml < cmd - m ; viml
 viml < i ; default
 viml < escape ; default
+
 
 
 ## hjkl
@@ -97,7 +99,6 @@ viml < shift - i : skhd -k "cmd - left"; skhd -k "escape"
 
 ## visual
 viml < shift - v : skhd -k "cmd - left"; skhd -k "cmd + shift - right"
-
 viml < v : skhd -k "left"; skhd -k "right"
 
 ## del and clipboard
