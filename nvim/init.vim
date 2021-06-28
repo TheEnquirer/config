@@ -327,6 +327,7 @@ nnoremap <Leader>o o<Esc>k
 nnoremap <Leader>O O<Esc>j
 "better bracket jumping
 nmap <C-_> %
+vmap <C-_> %
 "line moving commands
 "nnoremap <A-j> :m .+1<CR>==
 "nnoremap <A-k> :m .-2<CR>==
