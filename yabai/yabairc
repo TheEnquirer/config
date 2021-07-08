@@ -19,10 +19,10 @@ yabai -m config --space 8 bottom_padding 25
 yabai -m config --space 8 left_padding 35
 yabai -m config --space 8 right_padding 35
 yabai -m config --space 8 window_gap 30
-
+yabai -m rule --add app="SFMLSlime" manage=off
 # debug
 yabai -m config debug_output
-
+#yabai -m config --window "SFMLSlime" layout float
 
 # borders!
 
