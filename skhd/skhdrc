@@ -36,7 +36,7 @@ ctrl + cmd - left  : yabai -m window --space prev || yabai -m space --focus prev
 ctrl + cmd - right : yabai -m window --space next || yabai -m space --focus next
 
 # open specific applications
-ctrl + cmd - d             : open -a Discord
+ctrl + cmd - d             : open -a Cordis
 ctrl + cmd - m             : open -a Messages
 ctrl + cmd - s             : open -a Spark
 ctrl + cmd - o             : open -a Opera
