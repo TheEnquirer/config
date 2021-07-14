@@ -1,5 +1,5 @@
 ###########################################
-#   QOL 
+#   QOL
 ###########################################
 alias c="clear"
 alias desk="cd ~/desktop"
@@ -45,9 +45,19 @@ alias p='python3'
 alias pip='python3 -m pip'
 alias pym='python3 -m'
 
+function chpwd () {    # auto called by zsh
+    cur="$(pwd)"
 
+    # pyvenv stuff
+    if command -v deactivate; then deactivate; fi
+    while [[ -n $cur && $cur != "/" ]]; do   # search upwards https://unix.stackexchange.com/a/35265
+        [[ -f "$cur/pyvenv.cfg" ]] && source "$cur/bin/activate" && break
+        [[ -f "$cur/.venv/pyvenv.cfg" ]] && source "$cur/.venv/bin/activate" && break
 
-
+        # Note: if you want to ignore symlinks, use "$(realpath -s "$path"/..)"
+        cur="$(readlink -f "$cur"/..)"
+    done
+}
 
 function toggleOPP {
     #tmpp=`mktemp`
@@ -56,7 +66,6 @@ function toggleOPP {
     #mv $tmpp "/Users/huxmarv/.config/alacritty/alacritty_temp.yml"
     ##echo '' >> ~/.config/alacritty/alacritty.yml
     ##nvim "/Users/huxmarv/.config/alacritty/alacritty.yml" 
-    
 
     tmpp=`mktemp`
     mv "/Users/huxmarv/.config/alacritty/alacritty.yml" $tmpp
