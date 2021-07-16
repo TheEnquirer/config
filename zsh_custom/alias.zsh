@@ -15,6 +15,8 @@ function swaputil {
     mv $tmp $2
 }
 alias swap="swaputil"
+#alias fd="__zoxide_z"
+eval "$(zoxide init zsh)"
 defaults write -g ApplePressAndHoldEnabled -bool false
 ###########################################
 #    git
@@ -46,17 +48,17 @@ alias pip='python3 -m pip'
 alias pym='python3 -m'
 
 function chpwd () {    # auto called by zsh
-    cur="$(pwd)"
+#    cur="$(pwd)"
 
-    # pyvenv stuff
-    if command -v deactivate; then deactivate; fi
-    while [[ -n $cur && $cur != "/" ]]; do   # search upwards https://unix.stackexchange.com/a/35265
-        [[ -f "$cur/pyvenv.cfg" ]] && source "$cur/bin/activate" && break
-        [[ -f "$cur/.venv/pyvenv.cfg" ]] && source "$cur/.venv/bin/activate" && break
+#    # pyvenv stuff
+#    if command -v deactivate; then deactivate; fi
+#    while [[ -n $cur && $cur != "/" ]]; do   # search upwards https://unix.stackexchange.com/a/35265
+#        [[ -f "$cur/pyvenv.cfg" ]] && source "$cur/bin/activate" && break
+#        [[ -f "$cur/.venv/pyvenv.cfg" ]] && source "$cur/.venv/bin/activate" && break
 
-        # Note: if you want to ignore symlinks, use "$(realpath -s "$path"/..)"
-        cur="$(readlink -f "$cur"/..)"
-    done
+#        # Note: if you want to ignore symlinks, use "$(realpath -s "$path"/..)"
+#        cur="$(readlink -f "$cur"/..)"
+#    done
 }
 
 function toggleOPP {
