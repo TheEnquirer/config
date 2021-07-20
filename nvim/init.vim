@@ -76,6 +76,9 @@ let g:gitgutter_preview_win_floating = 0 " Disable floating/popup window for <Le
 " Rendering
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 Plug 'chrisbra/Colorizer'
+Plug 'jaxbot/semantic-highlight.vim'
+Plug 'folke/zen-mode.nvim'
+Plug 'folke/twilight.nvim'
 "Plug 'szymonmaszke/vimpyter'
 
 call plug#end()
@@ -264,7 +267,18 @@ com! DiffSaved call s:DiffWithSaved()
 
 " Colors! 
 command COLH ColorHighlight
-command COLC ColorClear 
+command COLC ColorClear
+
+
+" Note mode
+function! s:Note()
+    setlocal spell
+    setlocal syntax=markdown
+    inoremap jf <Esc>
+    ZenMode
+endfunction
+com! Note call s:Note()
+
 
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !pbcopy<CR><CR>
