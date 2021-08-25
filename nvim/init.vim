@@ -13,6 +13,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 imap <C-f> <Plug>(fzf-complete-line)
@@ -43,7 +44,7 @@ function! s:show_documentation()
 endfunction
 
 
-"Decent 
+"Decent
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'wadackel/vim-dogrun'
 "Favorite so far:
@@ -106,7 +107,7 @@ endif
 
 " from https://www.linode.com/docs/tools-reference/tools/introduction-to-vim-customization/
 set ttyfast " speed up scrolling
-set scrolloff=5 " display 8 lines above and below cursor at all times
+set scrolloff=5 " display 8 lines above and below cursor at all ti
 set matchpairs+=<:>
 
 " autoread (https://vi.stackexchange.com/a/13092)
@@ -154,15 +155,16 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 colo dark_purple
 
-" allow opacity to work in alacritt
-hi! Normal ctermbg=NONE guibg=NONE 
+hi Comment gui=NONE
+" allow opacity to work in alacritty
+hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 command OP call SetOpa()
 command FI colo dark_purple
 
 function! SetOpa()
     hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-    hi! Normal ctermbg=NONE guibg=NONE 
+    hi! Normal ctermbg=NONE guibg=NONE
 endfunction
 
 "set search stuff
@@ -209,7 +211,6 @@ fun! CleanExtraSpaces()
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
-
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
 endif
@@ -245,7 +246,7 @@ nmap <Leader>hr <Plug>(GitGutterRevertHunk)
 
 "no escape key (escape pressing escape)
 inoremap jc <Esc>
-inoremap jf <Esc>:w<return>
+inoremap jf <Esc>:w<return>:<Backspace>
 inoremap <C-c> <Esc>:w<return>
 command W w
 
@@ -265,7 +266,7 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
-" Colors! 
+" Colors!
 command COLH ColorHighlight
 command COLC ColorClear
 
@@ -289,9 +290,10 @@ nmap <Leader>yy :%w !pbcopy<CR><CR>
 set splitbelow
 set splitright
 
-set cmdheight=2
+set cmdheight=1
 set signcolumn=yes
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline=0
 "   Completion window
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -352,4 +354,8 @@ vmap <C-_> %
 
 noh
 
-
+set noshowmode
+set noshowcmd
+set shortmess+=F
+set laststatus=0
+set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
