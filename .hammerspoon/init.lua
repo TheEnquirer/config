@@ -20,6 +20,22 @@ ctrlDoublePress.action = function()
 
 
 
+g = hs.hotkey.bind({"shift", "alt"}, "z", function()
+    hs.eventtap.event.newMouseEvent(hs.eventtap.event.types["leftMouseDown"], hs.mouse.getAbsolutePosition()):post()
+end, function()
+    hs.eventtap.event.newMouseEvent(hs.eventtap.event.types["leftMouseUp"], hs.mouse.getAbsolutePosition()):post()
+end)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
