@@ -14,8 +14,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
+set rtp+=/usr/local/opt/fzf
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 
@@ -104,6 +106,8 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal! g`\"" | endif
 endif
+
+"map <Leader>c <Plug>(easymotion-prefix)
 
 " from https://www.linode.com/docs/tools-reference/tools/introduction-to-vim-customization/
 set ttyfast " speed up scrolling
@@ -276,7 +280,7 @@ function! s:Note()
     setlocal spell
     setlocal syntax=markdown
     inoremap jf <Esc>
-    ZenMode
+    "ZenMode
 endfunction
 com! Note call s:Note()
 
