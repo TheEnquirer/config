@@ -46,7 +46,8 @@ ctrl + cmd - b             : open -a Obsidian
 ctrl + cmd - c             : open -a Condution
 ctrl + cmd - v             : open -a Firefox
 ctrl + cmd - z             : open -a zoom.us
-ctrl + cmd - e             : open -a Vecto
+#ctrl + cmd - e             : open -a Vecto # goodbye, my friend.
+ctrl + cmd - e             : open -a "Toggl Track" # nvm
 ctrl + cmd - i             : open -a Ideaflow
 #ctrl + cmd - q             : yabai -m space --focus 8
 cmd - return             : open -na alacritty
