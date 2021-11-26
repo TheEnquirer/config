@@ -1,0 +1,20 @@
+.cm-inline-code {
+    color: #c1c1c1 !important;
+    /*background-color: !important;*/
+    background-color: #34333A !important;
+    /*border-radius: 1px;*/
+}
+.markdown-preview-view code {
+    color:  #c1c1c1;
+    background-color: #34333A;
+}
+
+.cm-formatting-code {
+    border-radius: 3px;
+}
+
+.cm-inline-code {
+    /*border-left: 1px solid #34333A;*/
+    /*border-left: 4px solid red;*/
+     margin-left: -1.5px;
+}

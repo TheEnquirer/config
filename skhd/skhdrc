@@ -144,7 +144,7 @@ big < shift-l : yabai -m window --resize right:100:0 ; yabai -m window --resize 
 
 # instant window
 #ctrl + cmd - n: yabai -m display  --focus 3; open -na Alacritty; sleep 0.15; yabai -m window --toggle float; yabai -m window --resize abs:1000:600; yabai -m window --move abs:780:425
-ctrl + cmd - n: open -na Alacritty; sleep 0.15; yabai -m window --toggle float; yabai -m window --move abs:350:200; yabai -m window --resize abs:800:500
+ctrl + cmd - n: open -na Alacritty; sleep 0.20; yabai -m window --toggle float; yabai -m window --move abs:350:200; yabai -m window --resize abs:800:500
 cmd + shift - f: open -na Firefox; sleep 0.20; yabai -m window --toggle float; yabai -m window --move abs:350:200; yabai -m window --resize abs:800:500
 
 # unlock/Lock

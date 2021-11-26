@@ -1,0 +1,9 @@
+@media print {
+    .admonition {
+	/*background: #F8F8F8;*/
+	box-shadow: 0px 0px !important;
+	/*box-shadow: 5px 4px 19px 3px #000000;*/
+	/*margin: none !important;*/
+    }
+
+}

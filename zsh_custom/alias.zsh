@@ -11,6 +11,11 @@ alias f=". ranger"
 alias m="run_generic"
 alias mc='gcc main.c -o ./auto && ./auto && rm ./auto'
 
+function exporter {
+    pandoc -s $1 -c csstemplate.css --template template.html -o out.html --mathjax
+}
+alias epandoc="exporter"
+
 function swaputil {
     tmp=`mktemp`
     mv $1 $tmp

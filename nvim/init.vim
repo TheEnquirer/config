@@ -18,6 +18,8 @@ set rtp+=/usr/local/opt/fzf
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 

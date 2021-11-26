@@ -1,0 +1,35 @@
+/ : \frac{$tb$}{$tb$}
+tex : $$nl$$end$$nl$$
+v : \vec{$tb$}
+lim : \lim \limits_{ $tb$ \to $tb$ }
+
+mat : \begin{bmatrix} $nl$ $end$ $nl$ \end{bmatrix}
+m31 : \begin{bmatrix} $nl$ $tb$ \\ $nl$ $tb$ \\ $nl$ $tb$ $end$ $nl$ \end{bmatrix}
+m13 : \begin{bmatrix} $nl$ $tb$ & $tb$ & $tb$ $end$ $nl$ \end{bmatrix}
+m21 : \begin{bmatrix} $nl$ $tb$ \\$nl$ $tb$  $end$ $nl$ \end{bmatrix}
+m12 : \begin{bmatrix} $nl$ $tb$ & $tb$  $end$ $nl$ \end{bmatrix}
+m22 : \begin{bmatrix} $nl$ $tb$ & $tb$ \\$nl$ $tb$ & $tb$ $end$ $nl$ \end{bmatrix}
+m33 : \begin{bmatrix} $nl$ $tb$ & $tb$ & $tb$ \\$nl$ $tb$ & $tb$ & $tb$ \\$nl$ $tb$ & $tb$ & $tb$  $end$ $nl$ \end{bmatrix}
+mn : {{s:Matrix([[$end$])}}
+
+
+
+-> : \to
+in : \in
+delta : \Delta
+* : \cdot
+!= : ≠
+inf : \infty
+
++. :  + ... +
+,. : , ... ,
+
+end : ```
+
+n : n$nl$***$nl$$nl$ $end$$nl$
+
+
+s : {{s:$end$}}
+e : {{e:$end$}}
+p : {{p:$end$}}
+l : {{l:$end$}}

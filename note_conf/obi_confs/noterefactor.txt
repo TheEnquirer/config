@@ -1,0 +1,21 @@
+### {{new_note_title}}
+{{new_note_link}}
+
+
+## BREAK##
+
+---
+title:   {{new_note_title}}
+context:
+author:  Huxley Marvit
+date: {{date}}
+
+---
+
+#atomic #incomplete #stub
+sourced from {{link}}
+
+***
+
+$tb$
+{{new_note_content}}

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "create-react-app": "^3.4.1"
+    "create-react-app": "^3.4.1",
+    "serve": "^12.0.1"
   }
 }

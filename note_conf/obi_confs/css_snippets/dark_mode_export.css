@@ -1,0 +1,8 @@
+@media print {
+    p {
+	color: #dcddde;
+    }
+    div {
+	background: #181818;
+    }
+}
