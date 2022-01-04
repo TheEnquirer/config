@@ -11,8 +11,11 @@ alias f=". ranger"
 alias m="run_generic"
 alias mc='gcc main.c -o ./auto && ./auto && rm ./auto'
 
+export PATH=$PATH:~/.bin:/usr/local/smlnj/bin
+alias sml='rlwrap /usr/local/smlnj/bin/sml $@'
+
 function exporter {
-    pandoc -s $1 -c csstemplate.css --template template.html -o out.html --mathjax
+    pandoc -s $1 -c /Users/huxmarv/.config/note_conf/export_confs/csstemplate.css --template /Users/huxmarv/.config/note_conf/export_confs/template.html -o out.html --mathjax
 }
 alias epandoc="exporter"
 
