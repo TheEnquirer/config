@@ -8,6 +8,9 @@ alias vim="nvim"
 alias jp="jupyter notebook"
 alias cpwd="pwd | pbcopy"
 alias f=". ranger"
+alias ff='~;ranger --cmd fzf_select --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+
 alias m="run_generic"
 alias mc='gcc main.c -o ./auto && ./auto && rm ./auto'
 
