@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "create-react-app": "^3.4.1",
-    "next": "^12.0.7",
+    "next": "^12.0.9",
     "serve": "^12.0.1"
   }
 }
