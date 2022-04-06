@@ -1,3 +1,4 @@
 nvim/plugged
 yarn/global/node_modules
 coc/
+gh/
