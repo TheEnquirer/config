@@ -67,6 +67,7 @@ let g:indentLine_conceallevel = 1
 let g:indentLine_concealcursor = 'nv'
 "   tmux integration
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'nathom/tmux.nvim'
 
 "- HUD Toggles
 Plug 'preservim/nerdtree'
@@ -85,6 +86,8 @@ Plug 'jaxbot/semantic-highlight.vim'
 Plug 'folke/zen-mode.nvim'
 Plug 'folke/twilight.nvim'
 "Plug 'szymonmaszke/vimpyter'
+"
+Plug 'metakirby5/codi.vim'
 
 call plug#end()
 
