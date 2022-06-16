@@ -148,7 +148,8 @@ big < shift-l : yabai -m window --resize right:100:0 ; yabai -m window --resize 
 ctrl + cmd - n: open -na Alacritty; sleep 0.20; yabai -m window --toggle float; yabai -m window --move abs:350:200; yabai -m window --resize abs:800:500
 cmd + shift - f: open -na Firefox; sleep 0.20; yabai -m window --toggle float; yabai -m window --move abs:350:200; yabai -m window --resize abs:800:500
 
-# unlock/Lock ctrl + cmd - f: yabai -m window --toggle float
+# unlock/Lock 
+ctrl + cmd - f: yabai -m window --toggle float
 # sticky -- sadly, doesnt work :(
 #ctrl + alt - s: yabai -m window --toggle sticky
 
