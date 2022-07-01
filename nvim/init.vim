@@ -18,6 +18,7 @@ set rtp+=/usr/local/opt/fzf
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
+Plug 'github/copilot.vim'
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 imap <C-f> <Plug>(fzf-complete-line)
@@ -368,6 +369,10 @@ set noshowcmd
 set shortmess+=F
 set laststatus=0
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
+
+"vim.g.copilot_no_tab_map = 1
+imap <silent><script><expr> <Tab> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
 
 
 command Tail call CocAction('extensionStats')
