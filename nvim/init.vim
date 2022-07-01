@@ -20,6 +20,10 @@ Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'github/copilot.vim'
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
@@ -304,6 +308,19 @@ set cmdheight=1
 set signcolumn=yes
 "set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set statusline=0
+
+
+
+
+" find files and such w/ telescope!
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fj <cmd>lua require ('telescope.builtin').git_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
 "   Completion window
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -371,8 +388,7 @@ set laststatus=0
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
 
 "vim.g.copilot_no_tab_map = 1
-imap <silent><script><expr> <Tab> copilot#Accept("\<CR>")
+imap <silent><script><expr> <Leader><Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
-
 
 command Tail call CocAction('extensionStats')
