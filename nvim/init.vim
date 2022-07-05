@@ -388,7 +388,8 @@ set laststatus=0
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
 
 "vim.g.copilot_no_tab_map = 1
-imap <silent><script><expr> <Leader><Tab> copilot#Accept("\<CR>")
+"imap <silent><script><expr> <Leader><Tab> copilot#Accept("\<CR>")
+inoremap <expr> <Tab> pumvisible() ? "<C-n>" : copilot#Accept("<Tab>")
 let g:copilot_no_tab_map = v:true
 
 command Tail call CocAction('extensionStats')
