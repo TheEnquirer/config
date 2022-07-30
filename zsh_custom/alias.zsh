@@ -9,6 +9,7 @@ alias jp="jupyter notebook"
 alias cpwd="pwd | pbcopy"
 alias f=". ranger"
 alias ff='~;ranger --cmd fzf_select --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias j='just'
 
 
 alias m="run_generic"
@@ -55,12 +56,28 @@ alias GG='gutil -A'
 alias grsh='git remote show'
 
 ###########################################
-#    python 
+#    python
 ###########################################
 alias py='python3'
 alias p='python3'
 alias pip='python3 -m pip'
 alias pym='python3 -m'
+
+###########################################
+#    GUM
+###########################################
+
+alias jl="just_filter"
+
+function just_filter () {
+    CMD=$( echo "\n $(just --dump)" | gum filter | cut -d':' -f1 | tr -d ' ')
+    if [ -n "$CMD" ]; then
+		just $CMD
+	fi
+}
+###########################################
+#    AUTOS
+###########################################
 
 function chpwd () {    # auto called by zsh
 #    cur="$(pwd)"
