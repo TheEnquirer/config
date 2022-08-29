@@ -23,7 +23,7 @@ Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn r
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
+Plug 'jbyuki/instant.nvim'
 
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
@@ -135,11 +135,43 @@ set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
 
 set nu rnu " reletive line nums
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+
+function! ToggleLineNumbers()
+    if !exists('g:ToggleLineNumbersAutoGroupMarker')
+	let g:ToggleLineNumbersAutoGroupMarker = 1
+    endif
+
+    " Enable if the group was previously disabled
+    if (g:ToggleLineNumbersAutoGroupMarker == 1)
+	let g:ToggleLineNumbersAutoGroupMarker = 0
+
+	setlocal nu rnu
+
+	" actual augroup
+	augroup numbertoggle
+	    autocmd!
+	    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+	augroup END
+    else    " Clear the group if it was previously enabled
+	let g:ToggleLineNumbersAutoGroupMarker = 1
+
+	" resetting the augroup
+	augroup numbertoggle
+	    autocmd!
+	augroup END
+	setlocal nonu nornu
+    endif
+endfunction
+
+call ToggleLineNumbers()
+
+function s:CallableToggleLineNumbers()
+    setlocal nonu nornu
+    call ToggleLineNumbers()
+endfunction
+com! ToggleLineNumbers call s:CallableToggleLineNumbers()
+
 
 " show invisibles
 set encoding=utf-8
@@ -291,6 +323,8 @@ function! s:Note()
     setlocal syntax=markdown
     inoremap jf <Esc>
     "ZenMode
+    call ToggleLineNumbers()
+    setlocal nonu nornu
 endfunction
 com! Note call s:Note()
 
@@ -393,3 +427,5 @@ inoremap <expr> <Tab> pumvisible() ? "<C-n>" : copilot#Accept("<Tab>")
 let g:copilot_no_tab_map = v:true
 
 command Tail call CocAction('extensionStats')
+
+let g:instant_username = "enquirer_small"
