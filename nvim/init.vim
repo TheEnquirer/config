@@ -96,6 +96,14 @@ Plug 'metakirby5/codi.vim'
 
 call plug#end()
 
+let g:codi#interpreters = {
+	    \ 'python': {
+		\ 'bin': 'python3',
+		\ 'prompt': '^\(>>>\|\.\.\.\) ',
+		\ },
+		\ }
+
+
 
 " Jupyter Notebook
 
