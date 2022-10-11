@@ -183,7 +183,7 @@ com! ToggleLineNumbers call s:CallableToggleLineNumbers()
 
 " show invisibles
 set encoding=utf-8
-"set listchars=eol:⏎,tab:j·,trail:·,extends:>,precedes:<
+"set listchars=eol:⏎,tab:·,trail:·,extends:>,precedes:<
 set nolist
 
 " colors
@@ -232,6 +232,7 @@ set smartcase
 " tab sizing
 set shiftwidth=4
 set si " smart indent
+set expandtab
 
 " stop physical line wrapping
 " https://stackoverflow.com/questions/2280030/how-to-stop-line-breaking-in-vim
