@@ -50,6 +50,8 @@ ctrl + cmd - z             : open -a zoom.us
 ctrl + cmd - e             : open -a "Toggl Track" # nvm
 ctrl + cmd - i             : open -a Ideaflow
 ctrl + cmd - u             : open -a Slack
+ctrl + cmd - r             : open -a Notion # for REMOTE
+ctrl + cmd - p             : open -a Fantastical 
 #ctrl + cmd - q             : yabai -m space --focus 8
 cmd - return             : open -na alacritty
 #ctrl + cmd - p             : open -a Preview
