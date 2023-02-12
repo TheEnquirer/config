@@ -24,6 +24,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'jbyuki/instant.nvim'
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
@@ -41,6 +42,9 @@ nnoremap <leader>x "_x
 vnoremap <leader>x "_x
 nnoremap <leader>X "_X
 vnoremap <leader>X "_X
+
+
+let g:coc_node_path = trim(system('which node'))
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
