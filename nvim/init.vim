@@ -25,6 +25,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'jbyuki/instant.nvim'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+Plug 'hkupty/iron.nvim'
 
 imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
@@ -111,7 +112,7 @@ let g:codi#interpreters = {
 
 
 " Jupyter Notebook
-
+bu
 "autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
 "autocmd Filetype ipynb nmap <silent><Leader>j :VimpyterStartJupyter<CR>
 "autocmd Filetype ipynb nmap <silent><Leader>l :VimpyterStartNteract<CR>
@@ -306,6 +307,9 @@ nmap <Leader>hr <Plug>(GitGutterRevertHunk)
 "no escape key (escape pressing escape)
 inoremap jc <Esc>
 inoremap jf <Esc>:w<return>:<Backspace>
+tnoremap jf <Esc> <C-\><C-n><cmd>lua IronFocusToggle()<CR>
+"tnoremap <Esc> <C-\><C-n>
+
 inoremap <C-c> <Esc>:w<return>
 command W w
 
@@ -367,6 +371,8 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" iron repl config
+luafile ~/.config/nvim/lua/config/iron.lua
 
 "   Completion window
 "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
