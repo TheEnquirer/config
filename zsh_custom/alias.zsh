@@ -149,7 +149,7 @@ run_generic () {
 # Codi
 # Usage: codi [filetype] [filename]
 codi() {
-  local syntax="${1:-python}"
+  local syntax="${1:-python3}"
   shift
   vim -c \
     "let g:startify_disable_at_vimenter = 1 |\

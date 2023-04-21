@@ -23,7 +23,7 @@ Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn r
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'jbyuki/instant.nvim'
+"Plug 'jbyuki/instant.nvim'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 imap <C-f> <Plug>(fzf-complete-line)
@@ -97,6 +97,7 @@ Plug 'folke/twilight.nvim'
 "Plug 'szymonmaszke/vimpyter'
 "
 Plug 'metakirby5/codi.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -274,7 +275,6 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
 endif
 
-
 " custom keymaps
 let mapleader = " "
 set timeoutlen=500
@@ -369,8 +369,23 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 
 "   Completion window
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+"set cot="menu,preview,longest"
+
 "   Coc Snippets
 imap <C-o> <Plug>(coc-snippets-expand)
 let g:coc_snippet_next = 'jn'
@@ -434,11 +449,12 @@ set shortmess+=F
 set laststatus=0
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
 
+let g:copilot_node_command = "~/.nvm/versions/node/v16.15.0/bin/node"
 "vim.g.copilot_no_tab_map = 1
 "imap <silent><script><expr> <Leader><Tab> copilot#Accept("\<CR>")
-inoremap <expr> <Tab> pumvisible() ? "<C-n>" : copilot#Accept("<Tab>")
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : copilot#Accept("<Tab>")
 let g:copilot_no_tab_map = v:true
 
 command Tail call CocAction('extensionStats')
 
-let g:instant_username = "enquirer_small"
+"let g:instant_username = "enquirer_small"
